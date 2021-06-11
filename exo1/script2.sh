@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# path="/nfs/opt/bdr/3R-IN3/"
-path="./"
+path="/nfs/opt/bdr/3R-IN3/"
 format_search_jpg=$(ls $path  | grep -i ".jpg")
 format_search_jpeg=$(ls $path | grep -i ".jpeg")
 
