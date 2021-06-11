@@ -10,7 +10,7 @@ do
 
     for pass in $motdepasse
     do
-        su <<< $pass
+        login <<< $pass
         # test des mot de passes avec le denotes bash string
         
         if [ $? -eq 0 ]
