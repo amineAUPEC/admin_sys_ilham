@@ -11,7 +11,7 @@ rm -f $output_file
 
 for file_jpg in $format_search_jpg
 do
-    file $file_jpg --extension | grep -i -v 'JPEG'
+    file $file_jpg --extension | grep -i -v 'JPEG' | cut -f 2 -d ' ' | grep -i 'JPG'
  	
     if [ $? -eq 0 ]
         then 
@@ -24,7 +24,7 @@ done
 
 for file_jpeg in $format_search_jpeg
 do
-    file $file_jpeg --extension | grep -i 'JPEG'
+    file $file_jpeg --extension | grep -i 'JPEG' | cut -f 2 -d ' ' | grep -i 'JPEG'
     if [ $? -eq 0 ]
         then 
             echo "$file_jpeg is JPEG"
