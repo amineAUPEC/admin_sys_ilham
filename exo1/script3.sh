@@ -1,9 +1,9 @@
 #!/bin/bash
 
 path="/nfs/opt/bdr/3R-IN3/"
+output_file="trouves"
 file_to_copy=$(cat $path/$output_file)
 
-output_file="trouves"
 
 
 current_dir=$(pwd)
