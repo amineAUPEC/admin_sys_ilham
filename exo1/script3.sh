@@ -2,7 +2,6 @@
 
 path="/nfs/opt/bdr/3R-IN3/"
 file_to_copy=$(cat $path/$output_file)
-format_search_jpeg=$(ls | grep -i ".jpeg")
 
 output_file="trouves"
 
@@ -21,7 +20,7 @@ do
         then 
             echo "$copy_file a été copié"
     else 
-            echo "$file_jpg n'a pas été copié" 
+            echo "$copy_file n'a pas été copié" 
     fi
 done
 
