@@ -13,3 +13,4 @@ cd $path
 rm -rf 
 
 echo "$nom_tronque" > $output_file2
+sed -e 's/-//g' -i $output_file2
