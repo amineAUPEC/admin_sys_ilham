@@ -1,6 +1,6 @@
 #!/bin/bash
 
-path="/nfs/opt/bdr/3R-IN3"
+path="/nfs/opt/bdr/3R-IN3/"
 format_search_jpg=$(ls | grep -i ".jpg")
 format_search_jpeg=$(ls | grep -i ".jpeg")
 
@@ -33,3 +33,6 @@ do
     fi
 
 done
+
+
+echo "le fichier trouves est dans $path  : voici la commande cat $path/$output_file"
